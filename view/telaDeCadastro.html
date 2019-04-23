@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Tela de Cadastro</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form type="post" action="/be.py"> <>
+            <label>Nome</label>
+            <input type="text" name="nome" placeholder="Nome"><br>
+            
+            <label>Matrcula</label>
+            <input type="text" name="matricula" placeholder="Matricula"><br>
+            
+            <label>E-Mail</label>
+            <input type="email" name="email" placeholder="E-Mail"><br>
+            
+            <br><label>Cargo</label><br>
+            <input type="radio" name="cargo" value="Membro" checked>
+            <label>Membro</label><br>
+            <input type="radio" name="cargo" value="dirPresidente">
+            <label>Diretor Presidente</label><br>
+            <input type="radio" name="cargo" value="dirProcessosInternos">
+            <label>Diretor de Processos Internos</label><br>
+            <input type="radio" name="cargo" value="dirProjetos">
+            <label>Diretor Projetos</label><br>
+            <input type="radio" name="cargo" value="dirNegocios">
+            <label>Diretor Negócios</label><br>
+            <br>
+            
+            <br>
+            <label>Tipo de Usuario</label><br>
+            <input type="radio" name="tipoDeUsuario" value="Membro" checked>
+            <label>Membro</label>
+            <br>
+            <input type="radio" name="tipoDeUsuario" value="Trainee">
+            <label>Trainee</label>
+            <br>
+            
+            <br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </form>
+    </body>
+</html>
