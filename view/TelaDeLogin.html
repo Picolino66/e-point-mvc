@@ -7,12 +7,13 @@
 		</title>
 	</head>
 	<body>
-		<form action="/action_page.php">
-E-Mail: <input type="text" name="E-mail" placeholder="E-Mail"><br>
-Senha: <input type="text" name="senha" placeholder="Senha"><br>
-<input type="submit" value="Enviar">
-<input type="reset" value="Limpar">
+		<form action="/action_page.py" method="post">
+			<label>E-Mail:</label>
+			<input type="email" name="E-mail" placeholder="E-Mail"><br>
+			<label>Senha:</label>
+			<input type="text" name="senha" placeholder="Senha"><br>
+			<input type="submit" value="Enviar">
+			<input type="reset" value="Limpar">
 		</form>
-
 	</body>
 </html>
