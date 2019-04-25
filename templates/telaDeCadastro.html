@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Cadastro</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form type="post" action="/be.py">
+            <div align="center">
+                <table>
+                    <tr>
+                        <td><label>Nome</label></td>
+                        <td><input type="text" name="nome" placeholder="Nome"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Matrcula</label></td>
+                        <td><input type="text" name="matricula" placeholder="Matricula"></td>
+                    </tr>
+                    <tr>
+                        <td><label>E-Mail</label></td>
+                        <td><input type="email" name="email" placeholder="E-Mail"></td>
+                    </tr>
+                </table>
+                <br>
+                <label>Tipo de Usuario</label><br>
+                <input type="radio" name="tipoDeUsuario" value="Membro" checked>
+                <label>Membro</label>
+                <br>
+                <input type="radio" name="tipoDeUsuario" value="Trainee">
+                <label>Trainee</label>
+                <br>
+                
+                <br>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+        </form>
+    </body>
+</html>
