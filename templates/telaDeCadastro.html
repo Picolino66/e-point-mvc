@@ -6,7 +6,7 @@
     </head>
     <body>
         <form method="post" action="/be.py">
-            <div align="center">
+            <div align="left">
                 <table>
                     <tr>
                         <td><label for="nome">Nome</label></td>
@@ -23,12 +23,16 @@
                 </table>
                 <br>
                 <label >Tipo de Usuario</label><br>
-                <input type="radio" id="membro" name="tipoDeUsuario" value="Membro" checked>
-                <label for="membro">Membro</label>
-                <br>
-                <input type="radio" id="trainee" name="tipoDeUsuario" value="Trainee">
-                <label for="trainee">Trainee</label>
-                <br>
+                <table>
+                    <tr>
+                        <td><input type="radio" id="membro" name="tipoDeUsuario" value="Membro" checked></td>
+                        <td><label for="membro">Membro</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="trainee" name="tipoDeUsuario" value="Trainee"></td>
+                        <td><label for="trainee">Trainee</label></td>
+                    </tr>
+                </table>
                 <br>
                 <input type="submit" value="Enviar">
                 <input type="reset" value="Limpar">
