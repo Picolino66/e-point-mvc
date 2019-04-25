@@ -5,31 +5,30 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <form type="post" action="/be.py">
+        <form method="post" action="/be.py">
             <div align="center">
                 <table>
                     <tr>
-                        <td><label>Nome</label></td>
-                        <td><input type="text" name="nome" placeholder="Nome"></td>
+                        <td><label for="nome">Nome</label></td>
+                        <td><input type="text" id="nome" name="nome" placeholder="Nome"></td>
                     </tr>
                     <tr>
-                        <td><label>Matrcula</label></td>
-                        <td><input type="text" name="matricula" placeholder="Matricula"></td>
+                        <td><label for="matricula">Matrícula</label></td>
+                        <td><input type="text" id="matricula" name="matricula" placeholder="Matrícula"></td>
                     </tr>
                     <tr>
-                        <td><label>E-Mail</label></td>
-                        <td><input type="email" name="email" placeholder="E-Mail"></td>
+                        <td><label for="email">E-Mail</label></td>
+                        <td><input type="email" id="email" name="email" placeholder="E-Mail"></td>
                     </tr>
                 </table>
                 <br>
-                <label>Tipo de Usuario</label><br>
-                <input type="radio" name="tipoDeUsuario" value="Membro" checked>
-                <label>Membro</label>
+                <label >Tipo de Usuario</label><br>
+                <input type="radio" id="membro" name="tipoDeUsuario" value="Membro" checked>
+                <label for="membro">Membro</label>
                 <br>
-                <input type="radio" name="tipoDeUsuario" value="Trainee">
-                <label>Trainee</label>
+                <input type="radio" id="trainee" name="tipoDeUsuario" value="Trainee">
+                <label for="trainee">Trainee</label>
                 <br>
-                
                 <br>
                 <input type="submit" value="Enviar">
                 <input type="reset" value="Limpar">
