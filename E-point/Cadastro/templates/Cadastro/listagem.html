@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Listagem de Usuários :</h2>
+    
+    <ul>
+
+    {%  for Usuário in Usuários %}
+        <li>
+            <a href="{% url 'update' Usuário.matricula %}">
+                {{ "Nome: "}} {{ Usuário.nome }}
+                {{ ", " }} {{ "Matricula: "}} {{ Usuário.matricula }}
+                {{ ", " }} {{ "Email: "}} {{ Usuário.email }}
+                {{ ", " }} {{ "Tipo de Usuário: "}} {{ Usuário.tipo_de_usuario }}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+
+    <a href="{% url 'novo_cadastro' %}">Criar novo usuário</a>
+
+</body>
+</html>
