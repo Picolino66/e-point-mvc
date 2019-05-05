@@ -4,9 +4,19 @@
         <title>Cadastro</title>
         <meta charset="UTF-8">
     </head>
-    <body>
-        <form method="post" action="/be.py">
-            <div align="left">
+    <body style="background-color:#eaeaea;">
+	<style>
+		.bloco 
+		{
+			 background-color: #5e2075;
+			 color: white;
+			 padding: 10px;
+			 margin: 500px;
+		}
+	</style>
+		<div class="bloco"align="center"> 
+			<form method="post" action="/be.py">	
+				<p>CADASTRO</p> 
                 <table>
                     <tr>
                         <td><label for="nome">Nome</label></td>
@@ -20,23 +30,27 @@
                         <td><label for="email">E-Mail</label></td>
                         <td><input type="email" id="email" name="email" placeholder="E-Mail"></td>
                     </tr>
+                    <tr>
+						<td><label >Tipo de Usuario</label><br></td>
+					</tr>
+					<table>
+					<tr>							
+						<td><input type="radio" id="membro" name="tipoDeUsuario" value="Membro" checked></td>
+						<td><label for="membro">Membro</label></td>
+					</tr>
+					<tr>
+						<td><input type="radio" id="trainee" name="tipoDeUsuario" value="Trainee"></td>
+						<td><label for="trainee">Trainee</label></td>
+					</tr>
+					</table>                 
                 </table>
                 <br>
-                <label >Tipo de Usuario</label><br>
-                <table>
-                    <tr>
-                        <td><input type="radio" id="membro" name="tipoDeUsuario" value="Membro" checked></td>
-                        <td><label for="membro">Membro</label></td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" id="trainee" name="tipoDeUsuario" value="Trainee"></td>
-                        <td><label for="trainee">Trainee</label></td>
-                    </tr>
-                </table>
+                
                 <br>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Limpar">
-            </div>
-        </form>
+                <input style="background-color: #5e2075;" class="btn" type="submit" value="Enviar">
+                <input style="background-color: #5e2075;" class="btn" type="reset" value="Limpar">
+           
+			</form>
+         </div>
     </body>
 </html>
