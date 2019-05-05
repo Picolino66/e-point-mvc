@@ -2,18 +2,24 @@
 <html lang="pt-br"> 
 	<head>
 		<meta charset="UTF-8">
-		<title>
-		TELA DE LOGIN
-		</title>
+		<title>TELA DE LOGIN</title>
 	</head>
 	<body>
-		<form action="/action_page.py" method="post">
-			<label>E-Mail:</label>
-			<input type="email" name="E-mail" placeholder="E-Mail"><br>
-			<label>Senha:</label>
-			<input type="text" name="senha" placeholder="Senha"><br>
-			<input type="submit" value="Enviar">
-			<input type="reset" value="Limpar">
-		</form>
+		<div align="center"> 
+			<form action="/action_page.py" method="get">
+				<table>
+					<tr>
+						<td><label for="E-mail">E-Mail:</label></td>
+						<td><input type="email" id="E-mail" name="eMail" placeholder="E-Mail"><br></td>
+					</tr>
+					<tr>
+						<td><label for="Senha">Senha:</label></td>
+						<td><input type="text" id="Senha" name="senha" placeholder="Senha"><br></td>
+					</tr>
+				</table>
+				<input type="submit" value="Enviar">
+				<input type="reset" value="Limpar">
+			</form>
+		</div>	
 	</body>
 </html>
