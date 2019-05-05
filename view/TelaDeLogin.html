@@ -2,23 +2,48 @@
 <html lang="pt-br"> 
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 		<title>TELA DE LOGIN</title>
-	</head>
-	<body>
-		<div align="center"> 
+		</head>
+	<body style="background-color:#eaeaea;">	
+	<style>
+		.bloco 
+		{
+			 background-color: #5e2075;
+			 color: white;
+			 padding: 10px;
+			 margin: 500px;
+		}
+	</style>
+		<div class="bloco" align="center" > 
 			<form action="/action_page.py" method="get">
+				<p>LOGIN</p>
 				<table>
 					<tr>
-						<td><label for="E-mail">E-Mail:</label></td>
-						<td><input type="email" id="E-mail" name="eMail" placeholder="E-Mail"><br></td>
+						<td><label for="E-mail">E-mail:</label></td>
+						<td><input type="email" id="E-mail" name="e-Mail" class="form-control" placeholder="E-mail"><br></td> 	
 					</tr>
 					<tr>
-						<td><label for="Senha">Senha:</label></td>
-						<td><input type="text" id="Senha" name="senha" placeholder="Senha"><br></td>
+						<div>
+							<td><label for="Senha">Senha:</label></td>
+							<td><input type="text" id="Senha" name="senha" class="form-control" placeholder="Senha"><br></td>
+						</div>
+					</tr>
+					<tr>        
+						<td><div class="checkbox"></td>
+						<td><label><input type="checkbox"> Remember me</label></td>
 					</tr>
 				</table>
-				<input type="submit" value="Enviar">
-				<input type="reset" value="Limpar">
+				
+				<div align="center">
+					<tr>
+						<td><button style="border:2px solid black; background-color:#5e2075;" type="reset" class="btn">Limpar</button></td>
+						<td><button style="border:2px solid black; background-color:#5e2075;" type="submit" class="btn">Enviar</button></td>
+					</tr>
+				</div>
 			</form>
 		</div>	
 	</body>
