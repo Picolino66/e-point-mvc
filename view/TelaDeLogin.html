@@ -6,21 +6,26 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		
 		<title>TELA DE LOGIN</title>
 		</head>
-	<body style="background-color:#eaeaea;">	
+	<body style="background-color:#eaeaea;">
+	
 	<style>
 		.bloco 
 		{
 			 background-color: #5e2075;
 			 color: white;
-			 padding: 10px;
-			 margin: 500px;
+			 margin-top:0px;	
+			 width: 350px;
+			 height: 220px;
+			 border-radius: 10px; 
 		}
+		
 	</style>
-		<div class="bloco" align="center" > 
+		<div class="bloco container" align="center" > 
 			<form action="/action_page.py" method="get">
-				<p>LOGIN</p>
+				<h4>LOGIN</h4>
 				<table>
 					<tr>
 						<td><label for="E-mail">E-mail:</label></td>
@@ -34,14 +39,14 @@
 					</tr>
 					<tr>        
 						<td><div class="checkbox"></td>
-						<td><label><input type="checkbox"> Remember me</label></td>
+						<td><label><input type="checkbox"> Lembrar de mim</label></td>
 					</tr>
 				</table>
 				
-				<div align="center">
+				<div>
 					<tr>
-						<td><button style="border:2px solid black; background-color:#5e2075;" type="reset" class="btn">Limpar</button></td>
-						<td><button style="border:2px solid black; background-color:#5e2075;" type="submit" class="btn">Enviar</button></td>
+						<td><button style="border:1px solid black; background-color:#5e2075;" type="reset" class="btn">Limpar</button></td>
+						<td><button style="border:1px solid black; background-color:#5e2075;" type="submit" class="btn">Enviar</button></td>
 					</tr>
 				</div>
 			</form>
