@@ -1,55 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-br"> 
+	<html lang="pt">
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-		
-		<title>TELA DE LOGIN</title>
-		</head>
-	<body style="background-color:#eaeaea;">
-	
-	<style>
-		.bloco 
-		{
-			 background-color: #5e2075;
-			 color: white;
-			 margin-top:0px;	
-			 width: 350px;
-			 height: 220px;
-			 border-radius: 10px; 
-		}
-		
-	</style>
-		<div class="bloco container" align="center" > 
-			<form action="/action_page.py" method="get">
-				<h4>LOGIN</h4>
-				<table>
-					<tr>
-						<td><label for="E-mail">E-mail:</label></td>
-						<td><input type="email" id="E-mail" name="e-Mail" class="form-control" placeholder="E-mail"><br></td> 	
-					</tr>
-					<tr>
-						<div>
-							<td><label for="Senha">Senha:</label></td>
-							<td><input type="text" id="Senha" name="senha" class="form-control" placeholder="Senha"><br></td>
-						</div>
-					</tr>
-					<tr>        
-						<td><div class="checkbox"></td>
-						<td><label><input type="checkbox"> Lembrar de mim</label></td>
-					</tr>
-				</table>
-				
-				<div>
-					<tr>
-						<td><button style="border:1px solid black; background-color:#5e2075;" type="reset" class="btn">Limpar</button></td>
-						<td><button style="border:1px solid black; background-color:#5e2075;" type="submit" class="btn">Enviar</button></td>
-					</tr>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- Folha Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<!--js-->
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+
+	<!-- Custom styles for this template -->
+	<link href="styllus.css" rel="stylesheet">
+	</head>
+		<body class="text-center">
+			<form class="form-signin bloco">
+				<h1 class="h3 mb-3 font-weight-normal">LOGIN</h1>
+				<div class="row py-2">	
+					<label class="col-3 col-form-label" for="E-mail"><h5>E-mail:</h5></label>
+					<div class="col-9">
+						<input type="email" id="E-mail" class="form-control" placeholder="E-mail" required autofocus>
+					</div>
 				</div>
+				<div class="row">	
+					<label class="col-3 col-form-label" for="Senha" class="sr-only"><h5>Senha:</h5></label>
+					<div class="col-9">
+						<input type="password" id="Senha" class="form-control" placeholder="Senha" required>
+					</div>
+				</div>
+				<div class="checkbox mb-3">
+					<label>
+						<input type="checkbox" value="remember-me"> Lembre de mim
+					</label>
+				</div>
+				<button type="reset" class="btn btn-outline-danger px-3">Reset</button>
+				<button type="submit" class="btn btn-outline-danger px-3">Enviar</button>
 			</form>
-		</div>	
-	</body>
-</html>
+		</body>
+	</html>
