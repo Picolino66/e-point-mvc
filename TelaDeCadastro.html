@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Cadastro</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!-- Folha Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<!--js-->
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script>
+			function goBack() {
+			window.history.back()
+			}
+		</script>
+		<!-- Custom styles for this template -->
+		<link href="styllus.css" rel="stylesheet">	
+    </head>
+    <body class="text-center">
+		<form class="form-signin bloco">	
+			<h1 class="h3 mb-3 font-weight-normal">CADASTRO</h1>
+			<div class="form-group row">	
+				<label align="left" class="col-5 col-form-label" for="nome"><h5>Nome Completo</h5></label>
+				<div class="col-7">
+					<input type="text" id="nome" name="nome" class="form-control" placeholder="Nome"required autofocus >
+				</div>
+			</div>
+			
+			<div class="form-group row">
+				<label align="left" for="matricula" class="col-5 col-form-label"><h5>Matrícula</h5></label>
+				<div class="col-7">
+				  <input type="text" class="form-control" id="matricula" placeholder="Matrícula">
+				</div>
+			</div>
+				
+			<div class="form-group row">
+				<label align="left" for="email" class="col-5 col-form-label"><h5>E-mail</h5></label>
+				<div class="col-7">
+					<input type="email" class="form-control" id="email" placeholder="Email">
+				</div>
+			</div>
+		
+			<div class="form-group">
+				<div class="row">
+					<legend align="left" class="col-form-label col-sm-6 pt-0"><h5>Tipo de Usuário</h5></legend>
+					<div align="left" class="col-sm-6">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="gridRadios" id="membro" value="option1" checked>
+							<label class="form-check-label" for="membro">
+								<h6>Membro</h6>
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="gridRadios" id="trainee" value="option2">
+							<label class="form-check-label" for="trainee">
+								<h6>Trainee</h6>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>       
+			<button onclick="goBack()" type="btn" class="btn btn-outline-emakers px-5">Voltar</button>
+			<button type="submit" class="btn btn-outline-emakers px-5">Enviar</button>
+		</form>
+    </body>
+</html>
