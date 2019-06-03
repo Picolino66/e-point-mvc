@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Log dos Usuários:</h2>
+    
+    <ul>
+
+    {%  for Log_Usuario in Log_Usuario %}
+        <li>
+                {{ "Id da Carteirinha: "}} {{ Log_Usuario.Id_Card }}
+                {{ ", " }} {{ "Horário de Entrada na Reunião: "}} {{ Log_Usuario.horarioEntrada }}
+                {{ ", " }} {{ "Horário de Saída na Reunião: "}} {{ Log_Usuario.horarioSaida }}
+                {{ ", " }} {{ "Status: "}} {{ Log_Usuario.Status }}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+
+</body>
+</html>

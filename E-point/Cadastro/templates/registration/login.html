@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!-- Folha Bootstrap -->
+		<link href="{% static '/bootstrap/dist/css/bootstrap.css' %}" rel="stylesheet">
+		<!--js-->
+		<script type="text/javascript" src="{% static '/bootstrap/dist/js/bootstrap.js' %}"></script>
+		<script type="text/javascript" src="{% static '/bootstrap/dist/js/jquery.js' %}"></script>
+
+		<!-- Custom styles for this template -->
+		<link href="{% static '/css/styllus2.css' %}" rel="stylesheet">
+	</head>
+	<body class="text-center">
+		<form class="form-signin bloco" style="margin-top: auto" method="POST">
+
+			{% csrf_token %}
+
+			<h1 class="h3 mb-3 font-weight-normal">LOGIN</h1>
+			
+			<div class="row py-2">	
+				{{ form.errors }}
+				<label class="col-3 col-form-label" id="id_username" for="User"><h5>Usuário:</h5></label>
+				<div class="col-9">
+					{{ form.username }}
+				</div>
+			</div>
+			
+			<div class="row">	
+				<label class="col-3 col-form-label" id="id_password" for="Senha" class="sr-only"><h5>Senha:</h5></label>
+				<div class="col-9">
+					{{ form.password }}
+				</div>
+			</div>
+			<div class="checkbox mb-3">
+				<label>
+					<input align="left" type="checkbox" value="remember-me"> Lembre de mim
+				</label>	
+			</div>
+			<a href="http://127.0.0.1:8000/cadastro/" type="btn" class="btn btn-outline-emakers px-5">Cadastrar</a>
+			<button type="submit" class="btn btn-outline-emakers px-5">Enviar</button>
+								
+		</form>
+</html>
+

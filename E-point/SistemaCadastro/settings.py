@@ -25,6 +25,10 @@ SECRET_KEY = 'g2dshp#j!!u#hmf0a0x1jirqg)#i#dsbndhmy)kus#ngsn8@pp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+LOGIN_REDIRECT_URL = 'log_view/'
+
+USE_TZ = True
+
 ALLOWED_HOSTS = []
 
 
@@ -38,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Cadastro',
+    'Mail',
 ]
 
 MIDDLEWARE = [
@@ -110,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
@@ -123,3 +128,49 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#Configuração do servidor smtp
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' 
+EMAIL_HOST = 'smtp.gmail.com' 
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587 
+EMAIL_HOST_USER = 'meninodavo2803@gmail.com' 
+EMAIL_HOST_PASSWORD = 'Emakersjr2019'
+
+#Configuração do Celery
+
+
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'America/Sao_Paulo'
+CELERY_BEAT_SCHEDULE = {
+    'task-number-one': {
+        'task': 'Cadastro.tasks.gerar_relatorio',
+        # 'schedule': crontab(minute=59, hour=23),
+        # 'args': (*args)
+    },
+    'task-number-two': {
+        'task': 'Mail.tasks.gerar_relatorio2',
+        # 'schedule': crontab(minute=0, hour='*/3,10-19'),
+        # 'args': (*args)
+    }
+}
+
+# from kombu import Exchange, Queue
+
+# task_default_queue = 'default' #1
+# default_exchange = Exchange('media', type='direct') #2
+# task_queues = (
+#     Queue(
+#         'media_queue', #3
+#         exchange=default_exchange, #4
+#         routing_key='video' #5
+#     )
+# )
+
+
+

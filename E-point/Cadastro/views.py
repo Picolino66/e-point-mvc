@@ -1,6 +1,11 @@
+import time
+# from SistemaCadastro.tasks import add
+from celery import shared_task
 from django.shortcuts import render, redirect
 from .models import Usuario
 from .forms import Usuario_Form
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
 
 # Create your views here.
 
@@ -13,6 +18,12 @@ def listagem(request):
 
 def login(request):
 
+    # form = request.POST
+    # if form.is_valid():
+    #     form.save()
+    #     return redirect('admin')
+
+    
     return render(request, 'Cadastro/login.html')
 
 def cadastro(request):
@@ -21,7 +32,7 @@ def cadastro(request):
     form = Usuario_Form(request.POST or None)
     
     if form.is_valid():
-        form.save()
+        form.save()    
         return redirect('listagem')
 
     data['form'] = form
@@ -39,5 +50,41 @@ def update(request, pk):
 
     data['form'] = form
     return render(request, 'Cadastro/cadastro.html', data)
+
+# def login_validation(request):
+#     message = "Login invalido !"
+#     form = Login
+#     if request.POST:
+#         user = authenticate(request, user='admin', password=request.POST['senha'])
+#         print(user)
+#         if user is not None:
+#             login(request, user)
+#             message = "Parabens, você fez login!"
+    
+#     return render(request, 'Cadastro/login.html', context={"message": message})
+
+# def slow_task():
+#     print('Started task, processing...')
+#     time.sleep(120)
+#     print('Finished Task')
+#     return True 
+
+# slow_task()
+
+# @shared_task(queue='default') #1
+# def slow_task():
+#     print('Started task, processing...')
+#     time.sleep(120)
+#     print('Finished Task')
+#     return True
+# slow_task.delay() #2
+
+
+# add.delay(4, 4)
+
+
+
+
+
 
 
