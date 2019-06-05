@@ -17,8 +17,9 @@ from django.contrib import admin
 from django.urls import path, include
 from Cadastro.views import listagem, login, cadastro, update 
 # login_validation
-from Mail.views import log
+from Mail.views import log, new_log
 from django.contrib.auth.views import LoginView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
@@ -31,4 +32,5 @@ urlpatterns = [
     path('', LoginView.as_view() , name='login'),
     path('sendmail/', include('Mail.urls')),
     path('log_view/', log, name='log'),
+    path('create/', new_log, name='new_log'),
 ]

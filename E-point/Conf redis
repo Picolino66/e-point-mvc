@@ -1,0 +1,3 @@
+required pass: Ec1Gg5qdCPrbmoNISm05ggPtSziP/am0fHtOfXgVpLzD6CCpZFVUR9Lgcvgug3dmotgUCtIUWTqF77gJ
+
+openssl rand 60 | openssl base64 -A : comando que gerou a senha

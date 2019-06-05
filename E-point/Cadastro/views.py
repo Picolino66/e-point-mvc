@@ -47,9 +47,11 @@ def update(request, pk):
     if form.is_valid():
         form.save()
         return redirect('listagem')
-
+    
     data['form'] = form
+
     return render(request, 'Cadastro/cadastro.html', data)
+    
 
 # def login_validation(request):
 #     message = "Login invalido !"
@@ -63,24 +65,7 @@ def update(request, pk):
     
 #     return render(request, 'Cadastro/login.html', context={"message": message})
 
-# def slow_task():
-#     print('Started task, processing...')
-#     time.sleep(120)
-#     print('Finished Task')
-#     return True 
 
-# slow_task()
-
-# @shared_task(queue='default') #1
-# def slow_task():
-#     print('Started task, processing...')
-#     time.sleep(120)
-#     print('Finished Task')
-#     return True
-# slow_task.delay() #2
-
-
-# add.delay(4, 4)
 
 
 

@@ -23,13 +23,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'g2dshp#j!!u#hmf0a0x1jirqg)#i#dsbndhmy)kus#ngsn8@pp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 LOGIN_REDIRECT_URL = 'log_view/'
 
 USE_TZ = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -140,6 +140,7 @@ EMAIL_HOST_PASSWORD = 'Emakersjr2019'
 
 #Configuração do Celery
 
+from celery.schedules import crontab
 
 CELERY_BROKER_URL = 'redis://localhost:6379'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379'
@@ -148,9 +149,9 @@ CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'America/Sao_Paulo'
 CELERY_BEAT_SCHEDULE = {
-    'task-number-one': {
-        'task': 'Cadastro.tasks.gerar_relatorio',
-        # 'schedule': crontab(minute=59, hour=23),
+    'slow_task': {
+        'task': 'Cadastro.tasks.slow_task',
+        'schedule': crontab(minute=59, hour=23),
         # 'args': (*args)
     },
     'task-number-two': {
