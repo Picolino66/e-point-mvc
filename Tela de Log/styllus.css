@@ -1,0 +1,45 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-align: center; 
+  align-items: center;
+  background-color: #eaeaea;
+  margin: 40px;
+}
+
+.bloco 
+{
+	 background-color: #5e2075;
+	 color: white;
+	 margin-top:8px;
+	 height: 110px;
+	 width: 200px;
+	 border-radius: 5px; 
+}
+.bloco_central
+{	
+	 background-color: #5e2075;
+	 color: white;
+	 margin: 8px 0px;
+	 height: 346px;
+	 width: 450px;
+	 border-radius: 5px; 
+	 
+}
+.entrada {
+
+	 border:none;
+	 border-radius: 5px;
+	 width: 80%;
+	 text-align: center;
+	 background-color: #eaeaea;
+	 height: 30%;
+}
+p. {
+	 margin: 0;
+}
