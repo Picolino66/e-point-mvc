@@ -11,12 +11,16 @@ body {
   background-color: #eaeaea;
   margin: 40px;
 }
-
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
 .bloco 
 {
 	 background-color: #5e2075;
 	 color: white;
-	 margin-top:8px;
 	 height: 110px;
 	 width: 200px;
 	 border-radius: 5px; 
@@ -25,7 +29,6 @@ body {
 {	
 	 background-color: #5e2075;
 	 color: white;
-	 margin: 8px 0px;
 	 height: 346px;
 	 width: 450px;
 	 border-radius: 5px; 
