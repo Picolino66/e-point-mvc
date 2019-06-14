@@ -8,21 +8,21 @@ body {
   display: flex;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 5%;
+  padding-bottom: 5%;
   background-color: #eaeaea;
 }
 .Titulo {
-  margin-bottom: 1%;
-  font-weight: 500;
-  line-height: 1.2;
-  font-size: 2rem;
   color: #5e2075;
+  font-weight:289; 
+  font-size: 60px;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 .img-fluid {
   max-width: 100%;
   height: auto;
-  padding-bottom: 2%;
+  padding-bottom: 0;
   padding-top: 2%;
 }
 
